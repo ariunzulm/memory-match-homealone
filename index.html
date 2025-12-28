@@ -3,10 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Memory Match</title>
+    <title>Match Home Alone Characters</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="container">
+      <div class="header">
+        <img src="images/home-alone-log.webp" alt="home-alone-logo" />
+
+        <div class="statuses">
+          <div class="status">
+            <div class="status-label">Move</div>
+            <div class="status-value" id="moves">0</div>
+          </div>
+          <div class="status">
+            <div class="status-label">Time</div>
+            <div class="status-value" id="time">0:00</div>
+          </div>
+          <div class="status">
+            <div class="status-label">Matches</div>
+            <div class="status-value" id="matches">0/8</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-board" id="gameBoard">
+        <div class="card flipped">
+          <div class="card-front">
+            <img src="images/card-front.png" alt="Kevin front" />
+          </div>
+          <div class="card-back">
+            <img src="images/1.png" alt="Other characters" />
+          </div>
+        </div>
+      </div>
+
+      <div class="controls show">
+        <button class="button" onclick="newGame()">New Game</button>
+      </div>
+      <div class="modal" id="winModal">
+        <div class="modal-content">
+          <h2>You wind bro!</h2>
+          <p id="finalMoves">Moves:</p>
+          <p id="finalTime">Time:</p>
+          <button class="button" onclick="newGame()">Play Again</button>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
